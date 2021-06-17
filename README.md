@@ -14,10 +14,10 @@ Data Source:
  
 Software: PostgreSQL v13.3, pgAdmin 4 v5.3, Jupyter Notebook, Anaconda 4.10.1, Python 3.7.6, Visual Studio Code, 1.56.0
  
-Code:	[ETL_function_test.ipynb](Resources/ETL_function_test.ipynb)
-		[ETL_clean_wiki_movies.ipynb](Resources/ETL_clean_wiki_movies.ipynb)
-		[ETL_clean_kaggle_data.ipynb](Resources/ETL_clean_kaggle_data.ipynb)
-		[ETL_create_database.ipynb](Resources/ETL_create_database.ipynb)
+Code:	[ETL_function_test.ipynb](ETL_function_test.ipynb)<br/>
+		[ETL_clean_wiki_movies.ipynb](ETL_clean_wiki_movies.ipynb)<br/>
+		[ETL_clean_kaggle_data.ipynb](ETL_clean_kaggle_data.ipynb)<br/>
+		[ETL_create_database.ipynb](ETL_create_database.ipynb)<br/>
 
 ## Results: Retirement
 
