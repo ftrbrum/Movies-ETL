@@ -2,52 +2,60 @@
 Module 8
 
 ## Overview of Analysis
-Pewlett Hackard is worried about the "Silver Tsunami" as many of their current employees are reaching retirement age.  We need to anaylize their employee records to determine the number of retiring employees per job title and to identify employees that are eligible to participate in their mentorship program.
+
+Amazing Prime wants to keep the dataset and updated on a daily basis. I've been asked to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. I’ll need to refactor the code from module 8 to create one function that takes in the three files—Wikipedia data, Kaggle metadata, and the MovieLens rating data—and performs the ETL process by adding the data to a PostgreSQL database.
+
 
 ## Resources:
 
 Data Source: 
-- [movies_metadata.csv](Resources/movies_metadata.csv)
-- [wikipedia-movies.json](Resources/wikipedia-movies.json)
+- [movies_metadata.csv](Resources/movies_metadata.csv)<br/>
+- [wikipedia-movies.json](Resources/wikipedia-movies.json)<br/>
 - ratings.csv
-
  
 Software: PostgreSQL v13.3, pgAdmin 4 v5.3, Jupyter Notebook, Anaconda 4.10.1, Python 3.7.6, Visual Studio Code, 1.56.0
  
-Code:	[ETL_function_test.ipynb](ETL_function_test.ipynb)<br/>
-		[ETL_clean_wiki_movies.ipynb](ETL_clean_wiki_movies.ipynb)<br/>
-		[ETL_clean_kaggle_data.ipynb](ETL_clean_kaggle_data.ipynb)<br/>
-		[ETL_create_database.ipynb](ETL_create_database.ipynb)<br/>
-
-## Results: Retirement
-
-![retirement_titles.png](Images/retirement_titles.png)
-- The first query was created to make a Retirement Titles table that holds all the job titles of current employees who were born between January 1, 1952 and December 31, 1955.  It returned a table with 133,776 entries.
-
-![unique_titles.png](Images/unique_titles.png)
-- The second query was to created to clean up the previous table.  We can now have a table that conatins every retirment eligible employee at their current job title within Pewlett Hackard.  There are 90,398 employees nearing retirement.
+Code:<br/>	
+- [ETL_function_test.ipynb](ETL_function_test.ipynb)<br/>
+- [ETL_clean_wiki_movies.ipynb](ETL_clean_wiki_movies.ipynb)<br/>
+- [ETL_clean_kaggle_data.ipynb](ETL_clean_kaggle_data.ipynb)<br/>
+- [ETL_create_database.ipynb](ETL_create_database.ipynb)<br/>
 
 
-## Results: Mentorship Program
+## Results: ETL_function_test
 
-![mentorship_eligibilty.png](Images/mentorship_eligibilty.png)
-- The last query created was for the Pewlett Hackard Mentorship Program.  We joined 3 databases and filtered the data to find current employees that meet the mentorship eligibility.  Pewlett Hackard has 1549 eligible employees for the program.
+
+![wiki_movies_df.png](Images/wiki_movies_df.png)
+
+![kaggle_metadata_df.png](Images/kaggle_metadata_df.png)
+
+![ratings_df.png](Images/ratings_df.png)
+
+
+## Results: ETL_clean_wiki_movies
+
+
+![wiki_movies_df_2.png](Images/wiki_movies_df_2.png)
+
+![wiki_movies_df_columns.png](Images/wiki_movies_df_columns.png)
+
+
+## Results: ETL_clean_kaggle_data
+
+
+![movies_with_ratings_df.png](Images/movies_with_ratings_df.png)
+
+![movies_df.png](Images/movies_df.png)
+
+
+## Results: ETL_create_database
+
+
+![movies_query.png](Resources/movies_query.png)
+
+![ratings_query.png](Resources/ratings_query.png)
+
 
 ## Summary
 
-- The "Silver Tsunami" coming to Pewlett Hackard will have 90,398 employees set to retire in the near future.  Senior Engineer and Senior Staff will be the highest impacted job titles with both having over 28,000 employees ready to retire soon.
-
-![retiring_titles.png](Images/retiring_titles.png)
-
-
-- I believe Pewllet Packard needs to increase the qualifications needed to mentor the next generation of employees.  As it stands there are 1549 employees eligible to mentor the next generation of 90,398 employees entering the workforce.  This is less than 1.8% of mentors available for new hires.
-
-![mentor_titles.png](Images/mentor_titles.png)
-
-- If the qualifications to be included in the Mentorship Program increases by 6 months there will be an extra 10,768 employees that are eligible to participate.  That is an increase of 695%.
-
-![mentor_titles_inc.png](Images/mentor_titles_inc.png)
-
-- I also think that chosing mentors based on age is a bad idea.  You could have an employee be the right age but only have 2 years with the company.  I have created a table called [years_of_service_eligibilty.csv](Data/years_of_service_eligibilty.csv) that shows the amount of days every employee with 25 to 15 years of working with Pewlett-Hackard.
-
-![days_of_service.png](Images/days_of_service.png)
+I have created the below deliverables for Amazing Prime.They will now be able to keep the dataset and update on a daily basis for years to come.
